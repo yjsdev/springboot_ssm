@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>添加用户页面</title>
+</head>
+<body>
+	<form th:action="@{/addUser}" method="post">
+		编号：<input type="text" name="systemid" value=""/>
+		<br/>
+		名称：<input type="text" name="username" value=""/>
+		<br/>
+		类型：<input type="text" name="usertype" value=""/>
+		<br/>
+		<input type="submit" value="提交"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>编辑用户页面</title>
+</head>
+<body>
+	<form th:action="@{/updateUser}" method="post">
+		<input type="hidden" name="systemid" th:field="${user.systemid}"/>
+		<br/>
+		名称：<input type="text" name="username" th:field="${user.username}"/>
+		<br/>
+		类型：<input type="text" name="usertype" th:field="${user.usertype}"/>
+		<br/>
+		<input type="submit" value="提交"/>
+	</form>
+</body>
+</html>

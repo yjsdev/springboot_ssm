@@ -1,0 +1,24 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>查询用户页面</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>编号</th>
+			<th>名称</th>
+			<th>类型</th>
+			<th>操作</th>
+		</tr>
+		<tr th:each="user:${userlist}">
+			<td th:text="${user.systemid}"></td>
+			<td th:text="${user.username}"></td>
+			<td th:text="${user.usertype}"></td>
+			<td>
+				<a th:href="@{/getUserById(systemid=${user.systemid})}">编辑</a>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
